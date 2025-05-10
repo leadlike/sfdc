@@ -1,0 +1,25 @@
+name: Deploy to Salesforce
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Salesforce CLI
+        uses: amtrack/sfdx-actions@v1.2.2
+        with:
+          command: 'sfdx version'
+
+      - name: Authenticate to Dev Hub
+        run: echo ${{ secrets.SFDX_AUTH_URL }} > ./auth.txt && sfdx auth:sfdxurl:store -f ./auth.txt -a LeadlikeDevHub
+
+      - name: Deploy metadata
+        run: sfdx force:source:deploy -p force-app -u LeadlikeDevHub
