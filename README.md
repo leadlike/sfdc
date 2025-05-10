@@ -1,6 +1,7 @@
 # LeadLike SFDC
 ![CI](https://github.com/leadlike/sfdc/actions/workflows/deploy.yml/badge.svg)
 
+
 This repository contains the Salesforce implementation assets for the **LeadLike** platform.
 
 ## 🌟 Purpose
