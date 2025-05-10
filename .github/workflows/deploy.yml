@@ -21,10 +21,10 @@ jobs:
 
       - name: Authenticate with SFDX URL
         run: |
-          echo ${{ secrets.SFDX_AUTH_URL }} > sfdx_auth.txt
-          sfdx auth:sfdxurl:store -f sfdx_auth.txt -a LeadlikeDevHub
+          echo "${{ secrets.SFDX_AUTH_URL }}" > sfdx_auth.txt
+          sfdx auth:sfdxurl:store -f sfdx_auth.txt -a LeadlikeDevHub --setdefaultusername
           sfdx force:org:list
 
       - name: Deploy Metadata
         run: |
-          sfdx force:source:deploy -p force-app -u LeadlikeDevHub --checkonly
+          sfdx force:source:deploy -p force-app -u LeadlikeDevHub --json --loglevel fatal
