@@ -1,0 +1,17 @@
+# Salesforce standard exclusions
+*.log
+node_modules/
+.DS_Store
+.env
+.sfdx/
+coverage/
+test-results/
+*.zip
+*.jar
+.idea/
+.vscode/
+*.iml
+
+# Salesforce DX Metadata folders
+force-app/main/default/classes-meta.xml
+force-app/main/default/triggers-meta.xml
