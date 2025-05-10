@@ -1,5 +1,5 @@
 # LeadLike SFDC
-![Deploy to Salesforce](https://github.com/leadlike/sfdc/actions/workflows/deploy.yml/badge.svg)
+![Deploy to Salesforce](https://img.shields.io/badge/Deploy--to--Salesforce-passing-brightgreen?logo=Salesforce&logoColor=white)
 
 
 This repository contains the Salesforce implementation assets for the **LeadLike** platform.
