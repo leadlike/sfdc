@@ -1,0 +1,9 @@
+{
+  "title": "Leadlike Docs",
+  "description": "Technical Documentation for the Salesforce PreSalesproject ",
+  "author": "Maxime Seligman",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  }
+}
