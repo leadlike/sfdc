@@ -19,11 +19,11 @@ jobs:
           npm install sfdx-cli --global
           sfdx --version
 
-      - name: Authenticate with SFDX URL
-        run: |
-          echo "${{ secrets.SFDX_AUTH_URL }}" > sfdx_auth.txt
-          sfdx auth:sfdxurl:store -f sfdx_auth.txt -a LeadlikeDevHub --setdefaultusername
-          sfdx force:org:list
+- name: Authenticate with SFDX URL
+  run: |
+    echo "${{ secrets.SFDX_AUTH_URL }}" > sfdx_auth.txt
+    sfdx force:auth:sfdxurl:store -f sfdx_auth.txt -a LeadlikeDevHub
+    sfdx force:org:list
 
       - name: Deploy Metadata
         run: |
