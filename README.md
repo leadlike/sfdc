@@ -22,3 +22,5 @@ Support a personalized learning journey with modular content, flow automation, a
 
 ---
 🔄 Synced with [GitBook Documentation](https://app.gitbook.com/o/...)  
+![CI](https://github.com/leadlike/sfdc/actions/workflows/deploy.yml/badge.svg)
+
